@@ -12,7 +12,7 @@ RUN apt-get -yqq update \
         git gnupg2 iproute2 lmod \
         locales lua-posix \
         python3 python3-pip python3-setuptools \
-        tcl unzip m4 wget git zlib1g-dev \
+        tcl unzip m4 wget git zlib1g-dev ssh \
  && apt-get clean \
  && locale-gen en_US.UTF-8 \
  && pip3 install boto3
