@@ -28,7 +28,7 @@ RUN cd /opt && git clone https://github.com/spack/spack.git && cd spack && git c
 WORKDIR /tmpdir
 
 ### YAMBO ###
-ARG yambo_version=4.5.3
+ARG yambo_version=5.0.0
 RUN . ${SPACK_ROOT}/share/spack/setup-env.sh && spack load openmpi@4.0.2 && spack load intel-mkl \
  && wget https://github.com/yambo-code/yambo/archive/${yambo_version}.tar.gz -O yambo-${yambo_version}.tar.gz \
  && tar zxf yambo-${yambo_version}.tar.gz && cd yambo-${yambo_version} \
