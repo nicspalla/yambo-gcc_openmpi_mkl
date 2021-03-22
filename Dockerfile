@@ -41,4 +41,4 @@ RUN . ${SPACK_ROOT}/share/spack/setup-env.sh && spack load openmpi@4.0.2 && spac
  && cd .. && rm -rf yambo-${yambo_version} yambo-${yambo_version}.tar.gz
 
 ENV PATH=/usr/local/yambo-${yambo_version}/bin:/opt/openmpi/bin:$PATH \
-    LD_LIBRARY_PATH=/usr/local/yambo-${yambo_version}/lib:/opt/openmpi/lib:$LD_LIBRARY_PATH
+    LD_LIBRARY_PATH=/usr/local/yambo-${yambo_version}/lib:/opt/mkl/compilers_and_libraries/linux/mkl/lib/intel64:/opt/openmpi/lib:$LD_LIBRARY_PATH
