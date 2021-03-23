@@ -35,7 +35,7 @@ RUN . ${SPACK_ROOT}/share/spack/setup-env.sh && spack load openmpi@4.0.2 && spac
  && ./configure --enable-open-mp --enable-msgs-comps --enable-time-profile --enable-memory-profile --enable-netcdf-hdf5 --enable-par-linalg \
     --with-blas-libs="-L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_gf_lp64 -lmkl_gnu_thread -lmkl_core -lgomp -lpthread -lm -ldl" \
     --with-lapack-libs="-L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_gf_lp64 -lmkl_gnu_thread -lmkl_core -lgomp -lpthread -lm -ldl" \
- && make libs && make -j4 yambo && make interfaces ypp \
+ && make ext-libs && make -j4 yambo && make interfaces ypp \
  && mkdir -p /usr/local/yambo-${yambo_version}/lib \
  && cp -r bin /usr/local/yambo-${yambo_version}/. \
  && cp -r lib/external/*/*/lib/*.* /usr/local/yambo-${yambo_version}/lib/. \
